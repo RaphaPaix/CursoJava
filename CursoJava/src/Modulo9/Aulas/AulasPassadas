@@ -32,6 +32,9 @@
 9.15 Conhecendo sobre o toString
 	representa uma informação do objeto -> descriçao do objeto na memória
 	gera o método na classe e depois invoca para imprimir todo o objeto
-9.16
-9.17
+9.16 métodos Equals() e HashCode: diferenciar e comparar objetos
+	equals os objetos saem diferentes pois o JAVA diferencia por locação de memória
+	gera o hashcode para o atributo que queira comparar (elimina essa diferenciação)
+	pode identificar IGUALDADE OU DIFERENCIAÇÃO
+9.17 
 9.18
