@@ -23,8 +23,8 @@
 9.10 Getters e Setters
 	get = obter o valor dos atributos
 	set = adicionar o valor nos atributos
-9.11
-9.12
+9.11 Primeiro método de cálculo de notas
+9.12 Metodos com retorno (aprovado ou reprovado)
 9.13
 9.14
 9.15
