@@ -25,6 +25,13 @@ public class Aluno {
 		nome = nomePadrao;
 		idade = idadePadrao;
 	}
+	//get e set idade
+	public int getIdade() {
+		return idade;
+	}
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
 	//SET
 	//this. faz referencia ao atributo da classe
 	public void setNome(String nome) {
@@ -85,4 +92,10 @@ public class Aluno {
 			return "Aluno reprovado";
 		}
 	}
+	//metodo toString
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + "]";
+	}
+	
 }

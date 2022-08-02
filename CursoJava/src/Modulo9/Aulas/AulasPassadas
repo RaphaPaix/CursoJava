@@ -25,9 +25,13 @@
 	set = adicionar o valor nos atributos
 9.11 Primeiro método de cálculo de notas
 9.12 Metodos com retorno (aprovado ou reprovado)
-9.13
-9.14
-9.15
+9.13 Solucionando problemas de NullPointerException 
+	Utiliza o debug para ver passo a passo
+	Identifica classe e linha (erro pode estar na anterior, objeto ou variável nulo)
+9.14 Entrada de dados com teclado
+9.15 Conhecendo sobre o toString
+	representa uma informação do objeto -> descriçao do objeto na memória
+	gera o método na classe e depois invoca para imprimir todo o objeto
 9.16
 9.17
 9.18
