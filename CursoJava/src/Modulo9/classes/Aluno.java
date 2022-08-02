@@ -11,4 +11,17 @@ public class Aluno {
 	String dataMatricula;
 	String nomeEscola;
 	String serieMatriculado;
+	//padrao
+	public Aluno() {
+		
+	}
+	//1 parametro
+	public Aluno (String nomePadrao) {
+		nome = nomePadrao;
+	}
+	//2 parametro
+	public Aluno (String nomePadrao, int idadePadrao) {
+		nome = nomePadrao;
+		idade = idadePadrao;
+	}
 }

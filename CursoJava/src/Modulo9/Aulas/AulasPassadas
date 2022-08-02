@@ -4,7 +4,15 @@
 9.4 Paradigma procedural vs objetos
 9.5 Caracteristicas dos objetos: atributos e métodos (açoes)
 9.6 Classe e Objeto aluno (professor utilizou novo pacote para adicionar a classe aluno)
-9.7 
+9.7 Construtor de objeto
+	Padrão: Aluno aluno1 = new Aluno();
+	public Aluno() {
+		
+	}
+	Com parametro: Aluno aluno4 = new Aluno("Maria");
+	public Aluno (String nomePadrao) {
+		nome = nomePadrao;
+	}
 9.8
 9.9
 9.10
