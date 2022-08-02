@@ -4,13 +4,14 @@ int media=0;
 String saidaResultado = media >= 70 ? "Aluno aprovado" : "Aluno reprovado"; (true/false)
 String saidaResultado = media >= 70 ? "Aluno aprovado" : (media >= 40 && media <= 69)? "Aluno em recuperação" : "Aluno reprovado";
 8.3 Operaçoes logicas aninhadas: operaçoes dentro de operaçoes
-8.4	Switch - case: serve para operaçoes exatas (menos maleável)
+8.4 Switch - case: serve para operaçoes exatas (menos maleável)
 8.5 Operadores relacionais: ==;>=;<=/!=;>;<.
 8.6 While (verifica e depois executa) e DO While (executa e depois verifica): Do While executa pelo menos uma vez.
 8.7 FOR: 2 formas - for(int i=0;i<10;i++) e for each e for marcado
-8.8
-8.9
-8.10
-8.11
-8.12
-8.13
+8.8 Repetição e parada com Break; parar a execução de código quando a condição for cumprida.
+8.9 Comando Continue; continua a execução mesmo quando a condição é cumprida. Pode servir bem para repetiçoes. 
+Retorna diretamente para o For e separa o processo. Não processa o que está embaixo no laço específico.
+8.10 Divisões e resto com MOD (módulo) de java: para resto se utiliza o simbolo "%" 
+8.11 Criando entrada de dados: entrada de texto e conversão de dados.
+8.12 
+8.13 
