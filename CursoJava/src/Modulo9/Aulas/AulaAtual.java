@@ -6,6 +6,7 @@ import Modulo9.classes.Aluno;
 
 public class AulaAtual {
 	public static void main(String[] args) {
+		/*
 		//interaçao com usuario
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno? ");
 		String idade = JOptionPane.showInputDialog("Qual a idade do aluno? ");
@@ -26,5 +27,20 @@ public class AulaAtual {
 		Aluno aluno4 = new Aluno("Maria");
 		Aluno aluno5 = new Aluno("Jose", 50);
 		System.out.println(aluno1.toString());
+		*/
+		//equals e hashcode
+		/*
+		Aluno alunoA = new Aluno();
+		Aluno alunoB = new Aluno();
+		alunoA.setNome("Rapha");
+		alunoB.setNome("Rapha");
+		alunoA.setIdade(22);
+		alunoB.setIdade(22);
+		if(alunoA.equals(alunoB)) {
+			System.out.println("Alunos iguais");
+		}else {
+			System.out.println("Alunos diferentes");
+		}
+		*/
 	}
 }
