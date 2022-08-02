@@ -13,9 +13,16 @@
 	public Aluno (String nomePadrao) {
 		nome = nomePadrao;
 	}
-9.8
-9.9
-9.10
+9.8 Instanciação, atributos e referências
+	new Aluno() é uma instancia -> criaçao de objeto
+	aluno1 é uma referência para o objeto aluno (variável)
+	atributos são as caracteristicas
+9.9 Declaração de tipos publico e privado
+	privado: exclusivo da classe
+	publico: para acesso de outras classes
+9.10 Getters e Setters
+	get = obter o valor dos atributos
+	set = adicionar o valor nos atributos
 9.11
 9.12
 9.13
