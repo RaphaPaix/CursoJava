@@ -13,5 +13,5 @@ String saidaResultado = media >= 70 ? "Aluno aprovado" : (media >= 40 && media <
 Retorna diretamente para o For e separa o processo. Não processa o que está embaixo no laço específico.
 8.10 Divisões e resto com MOD (módulo) de java: para resto se utiliza o simbolo "%" 
 8.11 Criando entrada de dados: entrada de texto e conversão de dados.
-8.12 
+8.12 Criando opçao de confirmação
 8.13 
