@@ -1,10 +1,10 @@
-9.1
-9.2
-9.3
-9.4
-9.5
-9.6
-9.7
+9.1 Introdução a orientação a objetos: Classe e objeto -> Uma classe é formada por dados e comportamentos, para representar uma regra geral de um objeto.
+9.2 Ideia central da POO: tudo pode ser representado por um objeto na programação. Exemplo: Carro e seus atributos.
+9.3 O que faz um objeto em JAVA - tráfego de dados entre a tela, camada interna e banco de dados. Carregar, processar, gravar e exibir informações agrupadas.
+9.4 Paradigma procedural vs objetos
+9.5 Caracteristicas dos objetos: atributos e métodos (açoes)
+9.6 Classe e Objeto aluno (professor utilizou novo pacote para adicionar a classe aluno)
+9.7 
 9.8
 9.9
 9.10
