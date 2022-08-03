@@ -1,6 +1,10 @@
-9.19 
-9.20
-9.21
+9.19 Introdução a listas e coleções
+	 Importação dos pacotes JAVA:
+	 import java.util.List
+	 import java.util.ArrayList
+	 Lista genérica = List lista = new ArrayList();
+9.20 Criando a lista discplinas no objeto aluno
+9.21 Adicionando disciplinas e calculando a média das notas
 9.22
 9.23
 9.24
