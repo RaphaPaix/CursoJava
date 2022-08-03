@@ -3,6 +3,7 @@ package Modulo9.Aulas;
 import javax.swing.JOptionPane;
 
 import Modulo9.classes.Aluno;
+import Modulo9.classes.Disciplina;
 
 public class AulaAtual {
 	public static void main(String[] args) {
@@ -42,5 +43,19 @@ public class AulaAtual {
 			System.out.println("Alunos diferentes");
 		}
 		*/
+		Aluno a = new Aluno();
+		a.setNome("Rapha");
+		a.setIdade(22);
+		a.getDisciplina().setNota1(75);
+		a.getDisciplina().setNota2(90);
+		a.getDisciplina().setNota3(85);
+		a.getDisciplina().setNota4(65);
+		a.getDisciplina().setDisciplina1("Matematica");
+		a.getDisciplina().setDisciplina2("Ciencias");
+		a.getDisciplina().setDisciplina3("Historia");
+		a.getDisciplina().setDisciplina4("Portugues");
+		System.out.println("A média do aluno é: " + a.getMediaNota());;
+		System.out.println("Resultado: " + (a.getAlunoAprovado()? "Aprovado" : "Reprovado"));
+		System.out.println(a.toString());
 	}
 }

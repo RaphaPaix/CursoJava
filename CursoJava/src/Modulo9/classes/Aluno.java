@@ -12,6 +12,14 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
+	//objeto disciplina dentro do objeto aluno
+	private Disciplina disciplina = new Disciplina();
+	public void setDisciplina(Disciplina disciplina) {
+		this.disciplina = disciplina;
+	}
+	public Disciplina getDisciplina() {
+		return disciplina;
+	}
 	//padrao
 	public Aluno() {
 		
@@ -41,6 +49,7 @@ public class Aluno {
 	public String getNome() {
 		return nome;
 	}
+	/*
 	//metodo media de notas
 	private double nota1;
 	private double nota2;
@@ -70,9 +79,10 @@ public class Aluno {
 	public void setNota4(double nota4) {
 		this.nota4 = nota4;
 	}
+	*/
 	//metodo que retorna a media
 	public double getMediaNota() {
-		return (nota1+nota2+nota3+nota4)/4;
+		return (disciplina.getNota1()+disciplina.getNota2()+disciplina.getNota3()+disciplina.getNota4())/4;
 	}
 	//metodo aprovado 1 (mais utilizado pela praticidade - a responsabilidade da String fica para a tela)
 	public boolean getAlunoAprovado() {
@@ -93,10 +103,7 @@ public class Aluno {
 		}
 	}
 	//metodo toString
-	@Override
-	public String toString() {
-		return "Aluno [nome=" + nome + ", idade=" + idade + "]";
-	}
+	
 	//metodo equals e hashcode
 	@Override
 	public int hashCode() {
@@ -105,6 +112,10 @@ public class Aluno {
 		result = prime * result + idade;
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		return result;
+	}
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", disciplina=" + disciplina + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {

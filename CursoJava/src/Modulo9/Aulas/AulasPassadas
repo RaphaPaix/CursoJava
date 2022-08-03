@@ -36,5 +36,5 @@
 	equals os objetos saem diferentes pois o JAVA diferencia por locação de memória
 	gera o hashcode para o atributo que queira comparar (elimina essa diferenciação)
 	pode identificar IGUALDADE OU DIFERENCIAÇÃO
-9.17 
-9.18
+9.17 Criando atributos da discplina aluno (dentro da classe Aluno) - não recomendado
+9.18 Criando um objeto com a disciplina aluno
