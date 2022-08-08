@@ -24,7 +24,37 @@ public class Aluno {
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
-	//padrao
+	//metodo calculo da media
+	public double getMediaNota() {
+		double somaDasNotas=0.0;
+		for( Disciplina disciplina : disciplinas) {
+			somaDasNotas += disciplina.getNota();
+		}
+		return somaDasNotas / disciplinas.size();
+	}
+	//metodo aprovado 1 (mais utilizado pela praticidade - a responsabilidade da String fica para a tela)
+		public boolean getAlunoAprovado() {
+			double media = this.getMediaNota();
+			if(media>=70) {
+				return true;
+			}else {
+				return false;
+			}
+		}
+	//metodo aprovado 2
+		public String getAlunoAprovado2() {
+			double media = this.getMediaNota();
+			if(media>=50) {
+				if(media<=70) {
+					return "Aluno em recuperação";
+				}else {
+					return "Aluno aprovado";
+				}
+			}else {
+				return "Aluno reprovado";
+			}
+		}
+	//construtor padrao
 	public Aluno() {
 		
 	}
@@ -97,5 +127,42 @@ public class Aluno {
 	}
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
+	}
+	//metodo toString
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", numeroCpf=" + numeroCpf + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + idade;
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		result = prime * result + ((numeroCpf == null) ? 0 : numeroCpf.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		if (idade != other.idade)
+			return false;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		if (numeroCpf == null) {
+			if (other.numeroCpf != null)
+				return false;
+		} else if (!numeroCpf.equals(other.numeroCpf))
+			return false;
+		return true;
 	}
 }
