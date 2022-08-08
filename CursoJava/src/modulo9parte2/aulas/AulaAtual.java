@@ -75,6 +75,7 @@ public class AulaAtual {
 			alunos.add(aluno1);
 		}
 		//for para imprimir a lista de alunos
+		/*
 		for (Aluno aluno : alunos) {
 			System.out.println(aluno.toString());
 			System.out.println(aluno.getDisciplinas().toString());
@@ -83,6 +84,52 @@ public class AulaAtual {
 			System.out.println("Resultado pelo método 2: " + aluno.getAlunoAprovado2());
 			//System.out.println("Resultado: " + (aluno.getAlunoAprovado()? "Aprovado" : "Reprovado"));
 			System.out.println("------------------------------------------");
+		}
+		*/
+		//for para imprimir um aluno específico
+		int confirmarEncontrar = JOptionPane.showConfirmDialog(null, "Deseja encontrar um aluno específico?");
+		if(confirmarEncontrar == 0) {
+			String nomeEncontrar = JOptionPane.showInputDialog("Qual aluno quer encontrar?");
+			for (Aluno aluno : alunos) {
+				if(aluno.getNome().equalsIgnoreCase(nomeEncontrar)) {	
+					System.out.println(aluno.toString());
+					System.out.println(aluno.getDisciplinas().toString());
+					//pegando media e resultado do aluno
+					System.out.println("A média do aluno é: " + aluno.getMediaNota());;
+					System.out.println("Resultado pelo método 2: " + aluno.getAlunoAprovado2());
+					//System.out.println("Resultado: " + (aluno.getAlunoAprovado()? "Aprovado" : "Reprovado"));
+					System.out.println("------------------------------------------");
+					break; //evita comer processamento a mais
+				}
+			}
+		}
+		//for para remover um aluno espeífico da lista
+		int confirmarRemover = JOptionPane.showConfirmDialog(null, "Deseja remover um aluno?");
+		if(confirmarRemover == 0) {
+			String nomeRemover = JOptionPane.showInputDialog("Qual o nome do aluno a ser removido?");
+			for (Aluno aluno : alunos) {
+				if(aluno.getNome().equalsIgnoreCase(nomeRemover)) {	
+					alunos.remove(aluno);
+					break; //evita comer processamento a mais
+				}else {
+					System.out.println(aluno.toString());
+					System.out.println(aluno.getDisciplinas().toString());
+					//pegando media e resultado do aluno
+					System.out.println("A média do aluno é: " + aluno.getMediaNota());;
+					System.out.println("Resultado pelo método 2: " + aluno.getAlunoAprovado2());
+					//System.out.println("Resultado: " + (aluno.getAlunoAprovado()? "Aprovado" : "Reprovado"));
+					System.out.println("------------------------------------------");
+				}
+			}
+		}
+		//imprimir disciplinas dos alunos que sobraram
+		for (Aluno aluno : alunos) {
+			System.out.println("Alunos que sobraram na lista: ");
+			System.out.println(aluno.getNome());
+			System.out.println("Suas matérias são: ");
+			for (Disciplina disciplina : aluno.getDisciplinas()) {
+				System.out.println(disciplina.getDisciplina());
+			}
 		}
 	}
 }
