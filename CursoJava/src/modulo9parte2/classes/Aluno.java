@@ -3,6 +3,8 @@ package modulo9parte2.classes;
 import java.util.ArrayList;
 import java.util.List;
 
+import Constantes.StatusAluno;
+
 public class Aluno {
 	//atributos do aluno
 	private String nome;
@@ -46,12 +48,12 @@ public class Aluno {
 			double media = this.getMediaNota();
 			if(media>=50) {
 				if(media<=70) {
-					return "Aluno em recuperação";
+					return StatusAluno.RECUPERACAO;
 				}else {
-					return "Aluno aprovado";
+					return StatusAluno.APROVADO;
 				}
 			}else {
-				return "Aluno reprovado";
+				return StatusAluno.REPROVADO;
 			}
 		}
 	//construtor padrao

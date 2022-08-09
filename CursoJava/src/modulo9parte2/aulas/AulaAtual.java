@@ -74,6 +74,47 @@ public class AulaAtual {
 			}
 			alunos.add(aluno1);
 		}
+		//percorrendo a lista por posiçoes
+		/*
+		for(int pos = 0;pos < alunos.size();pos++) {
+			Aluno aluno = alunos.get(pos);
+			System.out.println("Aluno: "+aluno.getNome());
+			System.out.println("Media do aluno: "+aluno.getMediaNota());
+			System.out.println("Resultado: "+aluno.getAlunoAprovado2());
+			for (Disciplina disc : aluno.getDisciplinas()) {
+				System.out.println("Materia: "+disc.getDisciplina()+"	Nota = "+disc.getNota());
+			}
+			System.out.println("------------------------");//diferenciar os objetos
+		}
+		*/
+		//susbtituindo um aluno na lista
+		int confirmarSubstituir = JOptionPane.showConfirmDialog(null, "Deseja substituir um aluno?");
+		if(confirmarSubstituir == 0) {
+			String nomeSubstituido = JOptionPane.showInputDialog("Digite o nome do aluno a ser substituido: ");
+			for(int pos = 0;pos < alunos.size();pos++) {
+				Aluno aluno = alunos.get(pos);
+				if(aluno.getNome().equalsIgnoreCase(nomeSubstituido)) {
+					Aluno trocar = new Aluno();
+					String nomeSubstituto = JOptionPane.showInputDialog("Digite o nome do novo aluno:");
+					trocar.setNome(nomeSubstituto);
+					Disciplina disciplina = new Disciplina();
+					String novaDisciplina = JOptionPane.showInputDialog("Adicione uma disciplina:");
+					disciplina.setDisciplina(novaDisciplina);
+					String novaNota = JOptionPane.showInputDialog("Qual a nota?");
+					disciplina.setNota(Double.valueOf(novaNota));
+					trocar.getDisciplinas().add(disciplina);
+					alunos.set(pos, trocar);
+					aluno = alunos.get(pos);
+				}
+				System.out.println("Aluno: "+aluno.getNome());
+				System.out.println("Media do aluno: "+aluno.getMediaNota());
+				System.out.println("Resultado: "+aluno.getAlunoAprovado2());
+				for (Disciplina disc : aluno.getDisciplinas()) {
+					System.out.println("Materia: "+disc.getDisciplina()+"	Nota = "+disc.getNota());
+				}
+				System.out.println("------------------------");//diferenciar os objetos
+			}
+		}
 		//for para imprimir a lista de alunos
 		/*
 		for (Aluno aluno : alunos) {
@@ -87,6 +128,7 @@ public class AulaAtual {
 		}
 		*/
 		//for para imprimir um aluno específico
+		/*
 		int confirmarEncontrar = JOptionPane.showConfirmDialog(null, "Deseja encontrar um aluno específico?");
 		if(confirmarEncontrar == 0) {
 			String nomeEncontrar = JOptionPane.showInputDialog("Qual aluno quer encontrar?");
@@ -103,7 +145,9 @@ public class AulaAtual {
 				}
 			}
 		}
+		*/
 		//for para remover um aluno espeífico da lista
+		/*
 		int confirmarRemover = JOptionPane.showConfirmDialog(null, "Deseja remover um aluno?");
 		if(confirmarRemover == 0) {
 			String nomeRemover = JOptionPane.showInputDialog("Qual o nome do aluno a ser removido?");
@@ -122,7 +166,9 @@ public class AulaAtual {
 				}
 			}
 		}
+		*/
 		//imprimir disciplinas dos alunos que sobraram
+		/*
 		for (Aluno aluno : alunos) {
 			System.out.println("Alunos que sobraram na lista: ");
 			System.out.println(aluno.getNome());
@@ -131,5 +177,6 @@ public class AulaAtual {
 				System.out.println(disciplina.getDisciplina());
 			}
 		}
+		*/
 	}
 }
