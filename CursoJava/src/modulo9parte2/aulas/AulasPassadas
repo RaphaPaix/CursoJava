@@ -17,6 +17,6 @@
 9.31 Classes e atributos estáticos (constantes): possuem varias vantagens, como por ex, facil manutençao
 9.32 Criando lista de alunos aprovados, reporvados e em recuperaçao
 9.33 Separando as listas com HashMap: conjunto de listas que utiliza chaves ao inves de nomes
-9.34 
-9.35
+9.34 Simples validação de permissão de acesso (login e senha)
+9.35 Principio da responsabilidade unica - SOLID
 9.36
