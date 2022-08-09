@@ -1,18 +1,29 @@
 package modulo9parte2.aulas;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import Constantes.StatusAluno;
 //importando esta classe aluno e disciplina para diferenciar da outra
 import modulo9parte2.classes.Aluno;
 import modulo9parte2.classes.Disciplina;
 
 public class AulaAtual {
 	public static void main(String[] args) {
+		//declarando um HASHMAP = é uma lista que dentro dela temos uma chave que identifica uma sequencia de valores
+		//hashmap elimina a declaraçao das outras 3 listas
+		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 		//lista de alunos
 		List<Aluno> alunos= new ArrayList<Aluno>();
+		/*
+		//listas aprovados, reprovados e em recuperaçao
+		List<Aluno> alunosAprovados= new ArrayList<Aluno>();
+		List<Aluno> alunosReprovados= new ArrayList<Aluno>();
+		List<Aluno> alunosRecuperacao= new ArrayList<Aluno>();
+		*/
 		//criando uma iteraçao do for para criar a lista
 		String quantidadeAlunos = JOptionPane.showInputDialog("Quantos alunos quer adicionar?");
 		for(int qtd = 1;qtd <= Integer.valueOf(quantidadeAlunos); qtd++) {
@@ -74,6 +85,36 @@ public class AulaAtual {
 			}
 			alunos.add(aluno1);
 		}
+		//usando hashmap - inicializando
+		maps.put(StatusAluno.APROVADO, new ArrayList<Aluno>());
+		maps.put(StatusAluno.REPROVADO, new ArrayList<Aluno>());
+		maps.put(StatusAluno.RECUPERACAO, new ArrayList<Aluno>());
+		//separando as listas
+		for (Aluno aluno : alunos) {
+			if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.APROVADO)) {
+				maps.get(StatusAluno.APROVADO).add(aluno);
+			}else 
+			if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.REPROVADO)) {
+				maps.get(StatusAluno.REPROVADO).add(aluno);
+			}else {
+				maps.get(StatusAluno.RECUPERACAO).add(aluno);
+			}
+		}
+		//imprimindo a lista dos aprovados
+		System.out.println("---------------Lista dos Aprovados--------------");
+		for (Aluno aluno : maps.get(StatusAluno.APROVADO)) {
+			System.out.println("Aluno: "+aluno.getNome()+" / Media: "+aluno.getMediaNota());
+		}
+		//imprimindo a lista dos reprovados
+				System.out.println("---------------Lista dos Reprovados--------------");
+				for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
+					System.out.println("Aluno: "+aluno.getNome()+" / Media: "+aluno.getMediaNota());
+				}
+				//imprimindo a lista dos em recuperaçao
+				System.out.println("---------------Lista dos em Recuperaçao--------------");
+				for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
+					System.out.println("Aluno: "+aluno.getNome()+" / Media: "+aluno.getMediaNota());
+				}
 		//percorrendo a lista por posiçoes
 		/*
 		for(int pos = 0;pos < alunos.size();pos++) {
@@ -88,6 +129,7 @@ public class AulaAtual {
 		}
 		*/
 		//susbtituindo um aluno na lista
+		/*
 		int confirmarSubstituir = JOptionPane.showConfirmDialog(null, "Deseja substituir um aluno?");
 		if(confirmarSubstituir == 0) {
 			String nomeSubstituido = JOptionPane.showInputDialog("Digite o nome do aluno a ser substituido: ");
@@ -115,6 +157,7 @@ public class AulaAtual {
 				System.out.println("------------------------");//diferenciar os objetos
 			}
 		}
+		*/
 		//for para imprimir a lista de alunos
 		/*
 		for (Aluno aluno : alunos) {
